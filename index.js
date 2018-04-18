@@ -25,7 +25,7 @@ const secondResponse = readline.prompt();
 //turn it into a number
 const secondInput = +secondResponse;
 
-//output - calculate the answer
+//output - calculate the answer (for some reason this didn't run on node.js - crashed after 2nd input - but code is correct as per example)
 const answer = (firstInput * secondInput);
 //display
 console.log("This is the answer " + answer);
