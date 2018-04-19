@@ -11,6 +11,12 @@ console.log("Welcome to the Calculator");
 console.log("_-_-_-_-_-_")
 
 
+//operator input
+console.log("Would you like to add, subtract, multiply or divide your number?");
+//prompt for input, then define it as a constant
+const operator = readline.prompt();
+//turn it into an arithmetic operator???
+
 //first input
 console.log("Please enter your first number:");
 //prompt for input, then define it as a constant
@@ -25,7 +31,25 @@ const secondResponse = readline.prompt();
 //turn it into a number
 const secondInput = +secondResponse;
 
-//output - calculate the answer (for some reason this didn't run on node.js - crashed after 2nd input - but code is correct as per example)
-const answer = (firstInput * secondInput);
-//display
-console.log("This is the answer " + answer);
+//switch to run various different outcomes 
+switch (operator)
+{
+    case '+':
+    const plus = firstInput + secondInput;
+    console.log("This is the answer: " + plus);
+    break;
+    case '-':
+    const minus = firstInput - secondInput;
+    console.log("This is the answer: " + minus);
+    break;
+    case '/':
+    const divide = firstInput / secondInput;
+    console.log("This is the answer: " + divide);
+    break;
+    case '*':
+    const multiply = firstInput - secondInput;
+    console.log("This is the answer: " + multiply);
+    break;
+    default:
+    console.log("Sorry, I don't understand the operator");
+}
